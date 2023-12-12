@@ -16,7 +16,7 @@
         }
 
         .sayfa {
-            max-width: 960px;
+            width: 960px;
             margin: auto;
             padding: 10px;
             box-sizing: border-box;
@@ -29,10 +29,10 @@
 
         #logo {
             float: left;
-            width: 100%;
-            text-align: center;
+            width: 340px;
+            text-align: left;
             margin-top: 7px;
-            margin-bottom: 10px;
+            margin-left: 10px;
         }
 
         #logo h1 {
@@ -58,10 +58,10 @@
         }
 
         #menu {
-            float: none;
-            width: 100%;
-            text-align: center;
-            margin: 10px 0;
+            float: right;
+            width: 600px;
+            text-align: right;
+            margin: 30px 0 0 0;
         }
 
         #menu ul {
@@ -71,8 +71,8 @@
         }
 
         #menu ul li {
-            display: block;
-            margin-bottom: 10px;
+            display: inline;
+            margin-right: 35px;
         }
 
         #menu ul li a {
@@ -84,14 +84,19 @@
 
         .orta {
             margin-top: 25px;
+            overflow: hidden;
         }
 
         .orta-sol {
-            width: 100%;
+            width: 575px;
+            float: left;
+            box-sizing: border-box;
         }
 
         .orta-sag {
-            width: 100%;
+            width: 360px;
+            float: right;
+            height: 280px;
             background: #488997;
             padding: 10px;
             box-sizing: border-box;
@@ -107,9 +112,15 @@
             margin: 0 0 20px;
         }
 
+        .icerik {
+            overflow: hidden;
+        }
+
         .card {
-            width: 100%;
-            margin-bottom: 20px;
+            width: calc(33.33% - 20px); /* Adjust the width as needed */
+            margin: 0 10px 20px 0;
+            float: left;
+            box-sizing: border-box;
         }
 
         .card h1 {
@@ -225,6 +236,7 @@
                     <a href="#" onClick='alert("Bu proje için içerik yüklenmemiştir.")'>Daha Fazla >></a>
                 </div>
             </div>
+            <div class="clear"></div>
         </div>
     </div>
 </body>
