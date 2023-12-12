@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ana Sayfa - Emre Cihan</title>
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            background: #f4f4f4;
+            color: #333;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .sayfa {
+            max-width: 960px;
+            margin: auto;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .ust {
+            background: #232323;
+            padding: 10px 0;
+            overflow: hidden;
+        }
+
+        #logo,
+        #menu {
+            float: left;
+            width: 50%;
+        }
+
+        #logo h1 {
+            margin: 0;
+            padding: 0;
+            font-size: 32px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        #logo h1 a {
+            font-family: 'Georgia', serif;
+            text-decoration: none;
+            color: #fff;
+            letter-spacing: 3px;
+        }
+
+        #logo p {
+            color: #C0C0C0;
+            font-family: 'Georgia', serif;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        #menu {
+            text-align: right;
+        }
+
+        #menu ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #menu ul li {
+            display: inline;
+            margin-right: 25px;
+        }
+
+        #menu ul li a {
+            text-decoration: none;
+            font-size: 13px;
+            font-family: 'Verdana', sans-serif;
+            color: #C0C0C0;
+            transition: color 0.3s ease-in-out;
+        }
+
+        #menu ul li a:hover {
+            color: #ff7600;
+        }
+
+        .orta {
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        .icerik {
+            overflow: hidden;
+        }
+
+        .card {
+            width: calc(33.33% - 20px);
+            margin: 0 10px 20px 0;
+            float: left;
+            box-sizing: border-box;
+            background: #ecf0f1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card h1 {
+            border-bottom: 1px dotted #3498db;
+            padding-bottom: 15px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .card p {
+            color: #333;
+            padding: 15px;
+            line-height: 1.6;
+        }
+
+        .button a {
+            display: inline-block;
+            padding: 10px 15px;
+            color: #fff;
+            background-color: #3498db;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+
+        .button a:hover {
+            background-color: #2980b9;
+        }
+
+        .clear {
+            clear: both;
+        }
+
+        .orta-sag {
+            width: 100%;
+            box-sizing: border-box;
+            background: #3498db;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+        }
+
+        .orta-sag h1 {
+            color: #ecf0f1;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+
+        .orta-sag p {
+            color: #ecf0f1;
+            line-height: 1.6;
+        }
+
+        .sosyalbutonlar {
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .sosyalbutonlar a {
+            background: #ff7600;
+            text-decoration: none;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 18px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sosyalbutonlar a:hover {
+            transform: rotate(360deg);
+        }
+
+        .butt {
+            background-color: #ff7600;
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 14px;
+            display: inline-block;
+            margin: 20px 0;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .butt:hover {
+            background-color: #333;
+        }
+		#scrollTopButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #ff7600;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #scrollTopButton:hover {
+            background-color: #333;
+        }
+
+        #scrollTopButton::before {
+            content: "\2191";
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+		
+    </style>
+</head>
+
+<body>
+    <div class="sayfa">
+        <div class="ust">
+            <div id="logo">
+                <h1><a href="#Anasayfa">Emre Cihan</a></h1>
+                <p>Portfolio Project</p>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="#projeler">Projects</a></li>
+                    <li><a href="#hakkimda">About Me - Contact</a></li>
+                    <li>
+                        <div class="butt">
+                            <a href="indexEn.html">EN</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="clear"id="Anasayfa"></div>
+        </div>
+        <div class="orta" id="projeler">
+            <div class="card">
+                <h1>Drawing Machine</h1>
+                <img src="drawing.gif" width="100%" height="auto" alt="Drawing Machine (joseriesco.net)">
+                <p><cite>Image Quote </cite>, joseriesco.net</p>
+                <p>It is a drawing machine using old DVD reader mechanisms and Arduino Uno..</p>
+                <p>Materials found at home were used and it was produced by purchasing only the motor driver card..</p>
+                <p>Due to some errors made in power electronics calculations, it is not working at full efficiency - at the moment.. </p>
+                <hr>
+                <hr>
+                <p>Click the button below to access documents such as pictures and videos about the project.</p>
+                <div class="button">
+                    <a href="#" onClick='alert("No content has been uploaded for this project.")'>Daha Fazla >></a>
+                </div>
+            </div>
+            <div class="card">
+                <h1>Unmanned Aerial Vehicle</h1>
+                <img src="notFound.gif" width="100%" height="auto" alt="(dribbble.com)">
+                <p><cite>Image Quote </cite>, dribbble.com</p>
+				<p>Necessary work continues.</p>		    
+                <p><font color="red">Since this project has not been completed yet, required files such as images and videos are not yet suitable for sharing.</font></p>
+                <hr>
+                <hr>
+                <p>Click the button below to access documents such as pictures and videos about the project.</p>
+                <div class="button">
+                    <a href="#" onClick='alert("No content has been uploaded for this project.")'>Daha Fazla >></a>
+                </div>
+            </div>
+            <div class="card">
+                <h1>Project Awaiting Completion</h1>
+                <img src="notFound.gif" width="100%" height="auto" alt="(dribbble.com)">
+                <p><cite>Image Quote </cite>, dribbble.com</p>
+                <p><font color="red">Since this project has not been completed yet, required files such as images and videos are not yet suitable for sharing.</font></p>
+                <hr>
+                <hr>
+                <p>Click the button below to access documents such as pictures and videos about the project.</p>
+                <div class="button">
+                    <a href="#" onClick='alert("No content has been uploaded for this project.")'>More >></a>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="orta-sag" id="hakkimda">
+            <h1>Who is Emre Cihan??</h1>
+            <hr><hr>
+            <p>
+            <p>
+                Hello, I'm Emre—an avid enthusiast in technology and innovation. Having completed the compulsory English preparatory program in 2020-2021, I ventured into the world of Electrical and Electronics Engineering.
+            </p>
+            <p>
+                My academic journey encompasses a broad spectrum, including embedded systems engineering, automation, and ongoing theoretical and simulation-based training in HMI Panel, PLC programming, and more.
+            </p>
+            <p>
+                I'm committed to continuous learning and currently immersing myself in diverse topics such as:
+		    <ul>
+                    <li>SCADA (Supervisory Control and Data Acquisition)</li>
+                    <li>Communication Systems</li>
+                    <li>STM32 Boards</li>
+                </ul>
+            </p>
+		<p>While my practical experience in PLC programming and HMI panel programming is in the early stages, I am actively engaged in theoretical exploration and simulation exercises.
+		</p>
+		<p>I believe in the power of adaptability and continuous growth, eagerly applying my evolving knowledge to theoretical scenarios.
+		</p>
+		<p></p>
+		<p>You can use the buttons below to contact me.
+		</p>
+            <p>
+                <div class="sosyalbutonlar">
+                    <a href="mailto:1cihanemre@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/1cihanemre" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/1_cihanemre/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://tr.linkedin.com/in/cihanemre" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </p>
+            <div class="clear"></div>
+        </div>
+    </div>
+	<button id="scrollTopButton" onclick="scrollToTop()">TOP</button>
+	<script>
+        function scrollToTop() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
+
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            var scrollButton = document.getElementById("scrollTopButton");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        }
+    </script>
+</body
+</html>
