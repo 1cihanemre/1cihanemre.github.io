@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ana Sayfa - Emre Cihan</title>
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
         body {
-            background: #f2f2f2;
+            background: #f4f4f4;
             color: #333;
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -19,55 +21,48 @@
         .sayfa {
             max-width: 960px;
             margin: auto;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 8px;
+            overflow: hidden;
         }
 
         .ust {
-            background: #2c3e50;
+            background: #232323;
+            padding: 10px 0;
             overflow: hidden;
-            border-radius: 8px 8px 0 0;
-            margin-bottom: 20px;
         }
 
-        #logo {
+        #logo,
+        #menu {
             float: left;
             width: 50%;
-            text-align: left;
-            margin-top: 10px;
         }
 
         #logo h1 {
             margin: 0;
             padding: 0;
-            font-size: 24px;
+            font-size: 32px;
             text-transform: uppercase;
-            color: #ecf0f1;
+            color: #fff;
         }
 
         #logo h1 a {
             font-family: 'Georgia', serif;
             text-decoration: none;
-            color: #ecf0f1;
+            color: #fff;
             letter-spacing: 3px;
         }
 
         #logo p {
-            color: #ecf0f1;
+            color: #C0C0C0;
             font-family: 'Georgia', serif;
             margin: 0;
-            padding: 0;
             letter-spacing: 2px;
-            font-size: 14px;
         }
 
         #menu {
-            float: right;
-            width: 50%;
             text-align: right;
-            margin-top: 20px;
         }
 
         #menu ul {
@@ -78,60 +73,24 @@
 
         #menu ul li {
             display: inline;
-            margin-right: 20px;
+            margin-right: 25px;
         }
 
         #menu ul li a {
             text-decoration: none;
-            font-size: 14px;
+            font-size: 13px;
             font-family: 'Verdana', sans-serif;
-            color: #ecf0f1;
-            transition: color 0.3s ease;
+            color: #C0C0C0;
+            transition: color 0.3s ease-in-out;
         }
 
         #menu ul li a:hover {
-            color: #3498db;
+            color: #ff7600;
         }
 
         .orta {
-            margin-top: 25px;
-            overflow: hidden;
-        }
-
-        .orta-sol {
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        .orta-sol img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-        }
-
-        .orta-sag {
-            width: 100%;
-            box-sizing: border-box;
-            background: #3498db;
+            margin-top: 20px;
             padding: 20px;
-            border-radius: 0 0 8px 8px;
-            overflow: hidden;
-        }
-
-        .orta-sag h1 {
-            color: #ecf0f1;
-            font-size: 20px; /* Daha küçük bir font boyutu */
-            margin-bottom: 15px; /* Alt boşluğu azalt */
-            border-bottom: 2px solid #ecf0f1;
-            padding-bottom: 8px; /* Alt boşluğu azalt */
-        }
-
-        .orta-sag p {
-            color: #ecf0f1;
-            line-height: 1.6;
-            font-size: 14px; /* Daha küçük bir font boyutu */
         }
 
         .icerik {
@@ -190,19 +149,97 @@
             clear: both;
         }
 
+        .orta-sag {
+            width: 100%;
+            box-sizing: border-box;
+            background: #3498db;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            overflow: hidden;
+        }
+
+        .orta-sag h1 {
+            color: #ecf0f1;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 10px;
+        }
+
+        .orta-sag p {
+            color: #ecf0f1;
+            line-height: 1.6;
+        }
+
+        .sosyalbutonlar {
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .sosyalbutonlar a {
+            background: #ff7600;
+            text-decoration: none;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+            font-size: 18px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .sosyalbutonlar a:hover {
+            transform: rotate(360deg);
+        }
+
         .butt {
-            background-color: #e74c3c;
+            background-color: #ff7600;
             border: none;
             color: white;
-            padding: 5px 5px;
+            padding: 8px 15px;
             text-align: center;
             text-decoration: none;
-            font-size: 12px;
+            font-size: 14px;
             display: inline-block;
-            margin: 4px 2px;
+            margin: 20px 0;
             cursor: pointer;
-            border-radius: 0;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
         }
+
+        .butt:hover {
+            background-color: #333;
+        }
+		#scrollTopButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #scrollTopButton:hover {
+            background-color: #2980b9;
+        }
+
+        #scrollTopButton::before {
+            content: "\2191";
+            font-size: 20px;
+            margin-right: 8px;
+        }
+
+		
     </style>
 </head>
 
@@ -210,14 +247,13 @@
     <div class="sayfa">
         <div class="ust">
             <div id="logo">
-                <h1><a href="index.html">Emre Cihan</a></h1>
+                <h1><a href="#Anasayfa">Emre Cihan</a></h1>
                 <p>Proje İnceleme Sayfası</p>
             </div>
             <div id="menu">
                 <ul>
-                    <li><a href="index.html">Anasayfa</a></li>
-                    <li><a href="projeler.html">Projeler</a></li>
-                    <li><a href="hakkimda.html">Hakkımda - İletişim</a></li>
+                    <li><a href="#projeler">Projeler</a></li>
+                    <li><a href="#hakkimda">Hakkımda - İletişim</a></li>
                     <li>
                         <div class="butt">
                             <a href="indexEn.html">EN</a>
@@ -225,25 +261,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="clear"></div>
+            <div class="clear"id="Anasayfa"></div>
         </div>
-        <div class="orta">
-            <div class="clear"></div>
-        </div>
-        <div class="orta-sag">
-            <h1>Kısaca Emre Cihan Kimdir?</h1>
-            <p>
-                2001 doğumlu olan Emre Cihan, 2020-2021 yıllarında zorunlu ingilizce hazırlık programını başarı ile tamamlamış olup eğitimine Elektrik Elektronik Mühendisliği üzerine devam etmektedir.
-                <br><br><br><br><hr><hr>
-                <p>
-                    Detaylı Bilgi İçin
-                    <a href="hakkimda.html">Buraya</a>
-                    Tıklayınız.
-                </p>
-            </p>
-        </div>
-
-        <div class="icerik">
+        <div class="orta" id="projeler">
             <div class="card">
                 <h1>Çizim Makinesi</h1>
                 <img src="drawing.gif" width="100%" height="auto" alt="Drawing Machine (joseriesco.net)">
@@ -284,7 +304,78 @@
             </div>
             <div class="clear"></div>
         </div>
+        <div class="orta-sag" id="hakkimda">
+            <h1>Kısaca Emre Cihan Kimdir?</h1>
+            <p>
+                2001 doğumlu olan Emre Cihan, 2020-2021 yıllarında zorunlu ingilizce hazırlık programını başarı ile tamamlamış olup eğitimine Elektrik Elektronik Mühendisliği üzerine devam etmektedir.
+            </p>
+            <br><br><br><br>
+            <hr><hr>
+            <p>
+                Detaylı Bilgi İçin
+                <a href="#hakkimda">Buraya</a>
+                Tıklayınız.
+            </p>
+            <p>
+                2001 doğumlu olan Emre Cihan; ilkokulu, ortaokulu ve liseyi Kayseri'de tamamlamıştır.
+            </p>
+            <p>
+                2020-2021 yıllarında zorunlu ingilizce hazırlık programını başarı ile tamamlamış olup eğitimine Elektrik Elektronik Mühendisliği üzerine devam etmektedir. Yoğunlaşmak istediği alanlar gömülü sistem mühendisliği ve otomasyondur.
+            </p>
+            <p>
+                Şu an Assembly, PLC programlama ve HMI Panel eğitimlerine devam etmektedir.
+            </p>
+            <p>
+                Aşağıdaki konulara hakimdir (⭐⭐⭐⭐⭐):
+                <ul>
+                    <li>⭐⭐⭐⭐ C Programlama</li>
+                    <li>⭐⭐⭐⭐ Arduino, ESP kartları</li>
+                    <li>⭐⭐⭐ İngilizce</li>
+                    <li>⭐⭐⭐ AutoCAD </li>
+                    <li>⭐⭐ MS Uygulamaları</li>
+                    <li>⭐⭐ Matlab</li>
+                    <li>⭐ Almanca</li>
+                </ul>
+            </p>
+            <p>
+                Aşağıdaki konular üzerinden kişisel gelişimine devam edecektir:
+                <ul>
+                    <li>İletişim Sistemleri</li>
+                    <li>STM32 Kartları</li>
+                    <li>C++</li>
+                    <li>PCB Tasarımı</li>
+                </ul>
+            </p>
+            <p>
+                <div class="sosyalbutonlar">
+                    <a href="mailto:1cihanemre@gmail.com" target="_blank"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+                    <a href="https://twitter.com/1cihanemre" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    <a href="https://www.instagram.com/1_cihanemre/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://tr.linkedin.com/in/cihanemre" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                </div>
+            </p>
+            <div class="clear"></div>
+        </div>
     </div>
-</body>
+	<button id="scrollTopButton" onclick="scrollToTop()">Yukarı Çık</button>
+	<script>
+        function scrollToTop() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
 
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            var scrollButton = document.getElementById("scrollTopButton");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        }
+    </script>
+</body
 </html>
